@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <h1>Checkout</h1>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="explore.html">Explore</a>
-        <a href="exhibitions.html">Exhibitions</a>
-        <a href="tickets.html">Buy Tickets</a>
-        <a href="checkout.html">Checkout</a>
-    </nav>
+    <header>
+        <img id="logo" src="../static/monomuseLogo.png" alt="MonoMuse Museum Logo">
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html" id="navselected">Checkout</a>
+        </nav>
+    </header>
     <form>
         <label for="name">Name: (required)</label>
         <input type="text" id="name" name="name" required><br><br>
