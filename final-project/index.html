@@ -22,6 +22,7 @@
         <img id="logo" src="./static/monomuseLogo.png" alt="MonoMuse Museum Logo">
     </header>
     <nav class="nav_bar">
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
         <a href="index.html">Home</a>
         <a href="views/explore.html">Explore</a>
         <a href="views/exhibitions.html">Exhibitions</a>
@@ -41,6 +42,41 @@
         <button class="cta" id="readMoreButton">Read More</button>
         <button class="cta" id="readLessButton" style="display:none;">Read Less</button>
         <button class="cta"><a href="views/buytickets.html">Buy Tickets</a></button>
+        <section class="visitor-info">
+            <h3>Plan Your Visit</h3>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Hours</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td>Tuesday – Friday</td>
+                    <td>10:00 AM – 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday – Sunday</td>
+                    <td>10:00 AM – 6:00 PM</td>
+                </tr>
+            </table>
+            <p><strong>Address:</strong> 4400 Forbes Ave, Pittsburgh, PA 15213</p>
+            <p><strong>Phone:</strong> (412) 555-0199</p>
+            <p><strong>Email:</strong> info@monomuse.org</p>
+        </section>
+        <section class="membership-info">
+            <h3>Become a Member</h3>
+            <p>Support MonoMuse and enjoy exclusive benefits. Members receive unlimited free admission, 
+                early access to exhibitions, discounts at the museum shop, and invitations to 
+                members-only events. Memberships start at $50 per year for individuals and $90 for families.</p>
+            <h3>Make a Donation</h3>
+            <p>Your generous contributions help MonoMuse continue to create innovative exhibitions 
+                and educational programs. All donations are tax-deductible. To donate, please contact 
+                us at donations@monomuse.org or call (412) 999-9999.</p>
+        </section>
+
         <footer class="footer">
             <p id="copyYear"></p>
         </footer>

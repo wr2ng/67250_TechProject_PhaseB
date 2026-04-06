@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuseLogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+    <h3>Exhibition 1: Digital Dreams</h3>
+    <p>Experience the fusion of art and technology in our inaugural exhibition, "Digital Dreams." 
+        This immersive showcase features cutting-edge digital artworks that explore the boundaries 
+        of creativity in the digital age.</p>
+    <h3>Exhibition 2: Virtual Realities</h3>
+    <p>Step into the world of virtual reality art with our "Virtual Realities" exhibition. 
+        This collection of interactive installations and VR experiences invites visitors to 
+        explore new dimensions of artistic expression through immersive environments, motion 
+        tracking, and real-time generative visuals.</p>
+
+    <h3>Exhibition Gallery</h3>
+    <div class="gallery">
+        <div class="slideshow">
+            <img class="slide active-slide" src="../static/gallery1.jpg" alt="Children observing a colorful hanging toy-sculpture insallation">
+            <img class="slide" src="../static/gallery2.jpg" alt="Exhibit with chairs and abstract art, no visitors">
+            <img class="slide" src="../static/gallery3.jpg" alt="Black and yellow sculpture installation with visitors walking around it">
+            <img class="slide" src="../static/gallery4.jpg" alt="Pop art silkscreen prints on the wall with visitors walking around it">
+            <img class="slide" src="../static/gallery5.jpg" alt="Shining suit of armor installation with street art behind it and visitors walking around it">
+            <div class="slide-controls">
+                <button class="slide-btn" onclick="changeSlide(-1)">&#10094; Prev</button>
+                <span id="slideCounter">1 / 5</span>
+                <button class="slide-btn" onclick="changeSlide(1)">Next &#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    </main>
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+    </div>
+</body>
+</html>

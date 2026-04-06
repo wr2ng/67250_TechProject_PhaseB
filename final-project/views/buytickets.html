@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuseLogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+        <h2>Buy Tickets</h2>
+        <h3>Ticket Pricing</h3>
+        <table>
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>General</td>
+                <td>General admission for ages 18+. Under 18 admitted free of charge</td>
+                <td>$18</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Valid student ID required at entry</td>
+                <td>$18</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Valid member ID required at entry</td>
+                <td>$18</td>
+            </tr>
+        </table>
+        <h3>Available Dates — April 2026</h3>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Availability</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>April 12, 2026</td>
+                <td>10:00 AM – 5:00 PM</td>
+                <td>Available</td>
+                <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-12')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>April 19, 2026</td>
+                <td>10:00 AM – 5:00 PM</td>
+                <td>Available</td>
+                <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-19')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>April 26, 2026</td>
+                <td>10:00 AM – 5:00 PM</td>
+                <td>Limited</td>
+                <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-26')">Buy Now</button></td>
+            </tr>
+            <tr>
+                <td>May 3, 2026</td>
+                <td>10:00 AM – 5:00 PM</td>
+                <td>Available</td>
+                <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-05-03')">Buy Now</button></td>
+            </tr>
+        </table>
+        <div id="purchaseForm" class="purchase-form">
+            <h3>Complete Your Purchase</h3>
+            <form id="ticketForm">
+                <label for="visitDate">Visit Date: (required)</label>
+                <input type="date" id="visitDate" name="visitDate" required><br><br>
+                <label for="ticketType">Ticket Type: (required)</label>
+                <select id="ticketType" name="ticketType" required onchange="updatePrice()">
+                    <option value="general">General — $18</option>
+                    <option value="student">Student — $18</option>
+                    <option value="member">Member — $18</option>
+                </select><br><br>
+                <label for="numTickets">Quantity (1–10): (required)</label>
+                <input type="number" id="numTickets" name="numTickets" min="1" max="10" value="1" required onchange="updatePrice()" oninput="updatePrice()"><br><br>
+                <p class="price-display">Total: <strong id="totalPrice">$18</strong></p>
+                <label for="custEmail">Email: (required)</label>
+                <input type="email" id="custEmail" name="custEmail" required><br><br>
+                <label for="zipCode">Zip Code: (optional)</label>
+                <input type="text" id="zipCode" name="zipCode" maxlength="5" placeholder="e.g. 15213"><br><br>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="mailingList" name="mailingList">
+                    Join our mailing list
+                </label><br><br>
+            </form>
+            <button class="cta" id="placeOrderBtn" onclick="submitOrder()">Place Order</button>
+        </div>
+        <div id="confirmationPage" class="confirmation-page">
+            <h3>Order Confirmed!</h3>
+            <p>Thank you for your purchase. Here is your order summary:</p>
+            <p id="confirmDetails"></p>
+            <p>A confirmation email has been sent. We look forward to seeing you at MonoMuse!</p>
+            <button class="cta" onclick="window.location.reload()">Buy More Tickets</button>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+    </div>
+</body>
+</html>

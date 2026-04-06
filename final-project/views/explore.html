@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuseLogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets</a>
+    </nav>
+
+    <main class="explore-left">
+        <h2>Mission Statement</h2>
+        <p>MonoMuse is dedicated to exploring the evolving relationship between art, technology, 
+            and society. Our mission is to inspire curiosity and creativity by showcasing innovative 
+            exhibitions that highlight how digital tools, emerging technologies, and human imagination 
+            shape the future of artistic expression.</p>
+
+        <h3>Milestones</h3>
+        <ul>
+            <li>2020: MonoMuse opens its doors to the public with its inaugural exhibition, "Digital Dreams."</li>
+            <li>2021: First VR art exhibition — attracting over 50,000 online visitors.</li>
+            <li>2022: STEAM education program launched in collaboration with local schools.</li>
+            <li>2023: New wing for interactive installations and digital art opens.</li>
+        </ul>
+
+        <h3>Visit Us</h3>
+        <p>Hours: Tue – Sun, 10:00 AM – 6:00 PM</p>
+        <p>Location: 4400 Forbes Ave, Pittsburgh, PA 15213</p>
+        <p>Contact: info@monomuse.org</p>
+    </main>
+
+    <aside class="explore-right">
+        <img class="explore-photo" src="../static/museum.avif" alt="MonoMuse Museum exterior">
+        <div id="map"></div>
+        <iframe class="responsive-iframe"
+            src="https://www.youtube.com/embed/AozRXE2ssyM?si=CPfl1u9Ivq7fbTJH"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </aside>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+    </div>
+</body>
+</html>
