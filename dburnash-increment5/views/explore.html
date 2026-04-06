@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuseLogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleNav()">&#9776;</a>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+    <figure class="main_figure">
+        <img src="../static/museum.jpg" width="50%" alt="Explore Image">
+    </figure>
+    <iframe class="responsive-iframe"
+        src="https://www.youtube.com/embed/AozRXE2ssyM?si=CPfl1u9Ivq7fbTJH"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+    <h3>Mission Statement</h3>
+    <p>MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity.</p>
+    <h3>Milestones</h3>
+    <ul>
+        <li>2020: MonoMuse opens its doors to the public with its inaugural exhibition, "Digital Dreams."</li>
+        <li>2021: The museum hosts its first virtual reality art exhibition, attracting over 50,000 visitors online.</li>
+        <li>2022: MonoMuse collaborates with local schools to launch an educational program focused on STEAM (Science, Technology, Engineering, Art, and Math).</li>
+        <li>2023: The museum expands its physical space to include a new wing dedicated to interactive installations and digital art.</li>
+    </ul>
+    <div id="map"></div>
+    </main>
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+    </div>
+</body>
+</html>
