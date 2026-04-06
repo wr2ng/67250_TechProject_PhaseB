@@ -61,3 +61,14 @@ function addYear() {
 }
 
 addYear();
+
+function activeNav() {
+    const navLinks = document.querySelectorAll("nav li a");
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+    });
+}
+
+activeNav();

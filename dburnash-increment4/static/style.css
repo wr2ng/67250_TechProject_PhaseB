@@ -29,7 +29,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-#navselected {
+.active {
     color: #386641;
     border-color: #386641;
     font-weight: 700;
@@ -41,6 +41,17 @@ nav a:hover {
     border-radius: 12px;
     padding: 12px 24px;
     text-transform: uppercase;
+}
+
+#readMoreButton,
+#readLessButton {
+    color: #F2E8CF;
+    font-weight: 700;
+}
+
+#readMoreButton:hover,
+#readLessButton:hover {
+    background-color: #6A994E;
 }
 
 .cta a {
@@ -105,4 +116,33 @@ form * {
 }
 .footer {
     grid-area: footer;
+}
+
+.nav_bar {
+    grid-area: nav_bar;
+    display: flex;
+    justify-content: right;
+}
+
+.purchase-form {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #386641;
+    border-radius: 12px;
+}
+
+.buy-now-btn {
+    background-color: #386641;
+    color: #F2E8CF;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+ 
+.buy-now-btn:hover {
+    background-color: #6A994E;
 }
